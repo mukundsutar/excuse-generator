@@ -8,9 +8,12 @@
     --more3-section-height: 28%;
     --more4-section-height: 28%;
     --more5-section-height: 16%;
+
+    --title-height: 1.75rem;
+    --body-height: calc(100% - (var(--title-height)));
 }
 
-body{
+body {
 
     overflow: hidden;
 }
@@ -69,42 +72,67 @@ body{
     width: 50%;
     height: var(--more1-section-height);
 
- background-color: blueviolet;
+    background-color: blueviolet;
 }
 
 .date {
     width: 50%;
     height: var(--more1-section-height);
-    
+
     background-color: fuchsia;
 }
 
 .sincerity {
     width: 100%;
     height: var(--more2-section-height);
+
+    display: flex;
+    flex-direction: column;
+
     background-color: gold;
 }
 
-.excuses {
+.excuse {
     width: 100%;
     height: var(--more3-section-height);
+
+    display: flex;
+    flex-direction: column;
+
     background-color: darkmagenta;
 }
 
 .feel {
     width: 50%;
     height: var(--more4-section-height);
+
+    display: flex;
+    flex-direction: column;
+
     background-color: chartreuse;
 }
 
 .please {
     width: 50%;
     height: var(--more4-section-height);
+
+    display: flex;
+    flex-direction: column;
+
     background-color: brown;
 }
 
 .notes {
     width: 100%;
     height: var(--more5-section-height);
+
     background-color: coral;
+}
+
+.secondary-title{
+    height: var(--title-height);
+}
+
+.secondary-body{
+    height: var(--body-height);
 }
