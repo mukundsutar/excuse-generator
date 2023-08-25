@@ -1,0 +1,110 @@
+:root {
+    --main1-height: 15%;
+    --main2-height: 10%;
+    --main4-height: calc(100% - (var(--main1-height)) - (var(--main2-height)));
+
+    --more1-section-height: var(--main1-height);
+    --more2-section-height: 13%;
+    --more3-section-height: 28%;
+    --more4-section-height: 28%;
+    --more5-section-height: 16%;
+}
+
+body{
+
+    overflow: hidden;
+}
+
+.container {
+    width: 99vw;
+    height: 98vh;
+
+    display: flex;
+}
+
+.mainBody {
+    width: 60%;
+    height: 100%;
+
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.title {
+    width: 100%;
+    height: var(--main1-height);
+
+    background-color: bisque;
+}
+
+.to {
+    background-color: aqua;
+}
+
+.from {
+    background-color: chocolate;
+}
+
+.statement {
+    width: 100%;
+    height: var(--main4-height);
+
+    background-color: darkslateblue;
+}
+
+.address {
+    width: 50%;
+    height: var(--main2-height);
+}
+
+.secondaryBody {
+    width: 40%;
+    height: 100%;
+
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.form-number {
+    width: 50%;
+    height: var(--more1-section-height);
+
+ background-color: blueviolet;
+}
+
+.date {
+    width: 50%;
+    height: var(--more1-section-height);
+    
+    background-color: fuchsia;
+}
+
+.sincerity {
+    width: 100%;
+    height: var(--more2-section-height);
+    background-color: gold;
+}
+
+.excuses {
+    width: 100%;
+    height: var(--more3-section-height);
+    background-color: darkmagenta;
+}
+
+.feel {
+    width: 50%;
+    height: var(--more4-section-height);
+    background-color: chartreuse;
+}
+
+.please {
+    width: 50%;
+    height: var(--more4-section-height);
+    background-color: brown;
+}
+
+.notes {
+    width: 100%;
+    height: var(--more5-section-height);
+    background-color: coral;
+}
