@@ -15,5 +15,14 @@
 }
 
 .statement{
-    align-items: normal;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: flex-start; */
+    justify-content: center;
+
+    padding: 10px 10%;
+
+    font-size: 19px;
+    text-transform: uppercase;
+    text-align: center;
 }

@@ -11,6 +11,9 @@
 
     --title-height: 1.75rem;
     --body-height: calc(100% - (var(--title-height)));
+
+    --text-title-height: 1.75rem;
+    --text-body-height: calc(100% - (var(--title-height)));
 }
 
 body {
@@ -126,13 +129,24 @@ body {
     width: 100%;
     height: var(--more5-section-height);
 
+    display: flex;
+    flex-direction: column;
+
     background-color: coral;
 }
 
-.secondary-title{
+.secondary-title {
     height: var(--title-height);
 }
 
-.secondary-body{
+.secondary-body {
     height: var(--body-height);
+}
+
+.text-title {
+    height: var(--text-title-height);
+}
+
+.text-body {
+    height: var(--text-body-height);
 }
