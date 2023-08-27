@@ -1,5 +1,5 @@
 window.onload = async function () {
-    await updateSincerity();
+    // await updateSincerity();
 
     await updateExcuses();
     await updateFeel();
