@@ -48,3 +48,22 @@
 .sincerity .secondary-title {
     justify-content: center;
 }
+
+.sincerity #sincerity-text {
+    width: 100%;
+
+    display: flex;
+    justify-content: space-evenly;
+
+    font-size: 20px;
+}
+
+
+#radio-group {
+    width: 81%;
+
+    display: flex;
+    justify-content: space-evenly;
+
+    font-size: 3rem;
+}

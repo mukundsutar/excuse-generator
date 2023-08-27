@@ -1,11 +1,42 @@
 window.onload = async function () {
+    await updateSincerity();
+
     await updateExcuses();
     await updateFeel();
     await updatePlease();
 };
 
+async function updateSincerity() {
+    // let arraySincerity = ["Heartfelt", "-", "Begrudging", "-", "Technical"]
+
+    // for (let i = 0; i < arraySincerity.length; i++) {
+    //     let textStr = arraySincerity[i];
+
+    //     let newText = document.createElement("span")
+
+    //     document.getElementById("sincerity-text").appendChild(newText);
+
+    //     let idNumber= i+1;
+    //     newText.id= "radioText" + idNumber;
+    //     newText.innerText= textStr;
+    // }
+
+    // for (let i = 0; i < 8; i++) {
+    //     let newInput = document.createElement("INPUT");
+    //     newInput.setAttribute("type", "radio");
+    //     newInput.setAttribute("name", "radio")
+    //     let newLabel = document.createElement("label");
+
+    //     document.getElementById("radio-group").appendChild(newInput);
+    //     document.getElementById("radio-group").appendChild(newLabel);
+
+    //     let idNumber= i+1;
+    //     newInput.id = "radio" + idNumber;
+    // }
+}
+
 async function updateExcuses() {
-    let arrayPlease = [
+    let arrayExcuses = [
         "It is a Habit.",
         "I am a Naturally selfish person.",
         "I thought it would be funny.",
@@ -15,11 +46,13 @@ async function updateExcuses() {
         "It was my evil twin.",
     ];
 
-    for (let i = 0; i < arrayPlease.length; i++) {
-        const labelStr = arrayPlease[i];
+    for (let i = 0; i < arrayExcuses.length; i++) {
+        let labelStr = arrayExcuses[i];
 
         let newInput = document.createElement("INPUT");
         newInput.setAttribute("type", "checkbox");
+        newInput.setAttribute("onclick", "isChecked()");
+
         let newLabel = document.createElement("label");
         let breakLine = document.createElement("br");
 
@@ -27,13 +60,14 @@ async function updateExcuses() {
         document.getElementById("excuse-body").appendChild(newLabel);
         document.getElementById("excuse-body").appendChild(breakLine);
 
-        newLabel.id = "excuse" + i;
+        let idNumber= i+1;
+        newInput.id = "excuse" + idNumber;
         newLabel.innerText = labelStr;
     }
 }
 
 async function updateFeel() {
-    let arrayPlease = [
+    let arrayFeel = [
         "Terrible.",
         "Guilty.",
         "Stupid.",
@@ -43,11 +77,13 @@ async function updateFeel() {
         "Better now.",
     ];
 
-    for (let i = 0; i < arrayPlease.length; i++) {
-        const labelStr = arrayPlease[i];
+    for (let i = 0; i < arrayFeel.length; i++) {
+        let labelStr = arrayFeel[i];
 
         let newInput = document.createElement("INPUT");
         newInput.setAttribute("type", "checkbox");
+        newInput.setAttribute("onclick", "isChecked()");
+
         let newLabel = document.createElement("label");
         let breakLine = document.createElement("br");
 
@@ -55,7 +91,9 @@ async function updateFeel() {
         document.getElementById("feel-body").appendChild(newLabel);
         document.getElementById("feel-body").appendChild(breakLine);
 
-        newLabel.id = "feel" + i;
+
+        let idNumber= i+1;
+        newInput.id = "feel" + idNumber;
         newLabel.innerText = labelStr;
     }
 }
@@ -72,10 +110,12 @@ async function updatePlease() {
     ];
 
     for (let i = 0; i < arrayPlease.length; i++) {
-        const labelStr = arrayPlease[i];
+        let labelStr = arrayPlease[i];
 
         let newInput = document.createElement("INPUT");
         newInput.setAttribute("type", "checkbox");
+        newInput.setAttribute("onclick", "isChecked()");
+
         let newLabel = document.createElement("label");
         let breakLine = document.createElement("br");
 
@@ -83,7 +123,19 @@ async function updatePlease() {
         document.getElementById("please-body").appendChild(newLabel);
         document.getElementById("please-body").appendChild(breakLine);
 
-        newLabel.id = "please" + i;
+
+        let idNumber= i+1;
+        newInput.id = "please" + i;
         newLabel.innerText = labelStr;
+    }
+}
+
+function isChecked() {
+    var checkBox = document.getElementById("excuse1");
+    
+    if (checkBox.checked == true) {
+        console.log("hello");
+    } else {
+        console.log("bye");
     }
 }
